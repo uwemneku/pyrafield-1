@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&display=swap");
+body {
+  background-color: rgba(255, 255, 255, 0.329);
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Open Sans;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.containers {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .containers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 20px;
+  }
+}
+
+.slideshow {
+  max-height: 400px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .slideshow {
+    width: 50%;
+    max-height: auto;
+  }
+}
+
+.slideshow .owl-carousel {
+  z-index: 0;
+}
+
+.slideshow img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .slideshow img {
+    min-width: 100%;
+    max-height: auto;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.description {
+  position: relative;
+  z-index: 10;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: -30px;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    margin-top: 0;
+    width: 50%;
+  }
+}
+
+.description button {
+  border-style: none;
+  outline: none;
+  background: #FF9900;
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  position: fixed;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  width: 217px;
+  height: 48px;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .description button {
+    position: relative;
+  }
+}
+
+.description .description-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #cacaca;
+}
+
+.description .description-header .left-header {
+  padding: 12px;
+}
+
+.description .description-header .left-header h3 {
+  font-size: 22px;
+}
+
+.description .description-header .right-header {
+  background: #007E72;
+  min-width: 130px;
+  margin-left: auto;
+  padding: 10px 0 10px 16px;
+  border-top-right-radius: 20px;
+}
+
+.description .description-header .right-header h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  width: 100%;
+}
+
+.location {
+  padding: 10px 16px 10px 16px;
+  border-bottom: 1px solid #cacaca;
+}
+
+.location div:nth-child(1) {
+  width: 38%;
+}
+
+.location p {
+  font-size: 11px;
+}
+/*# sourceMappingURL=App.css.map */
