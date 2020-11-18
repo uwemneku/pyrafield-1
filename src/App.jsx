@@ -6,6 +6,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
+import ReactWOW from "react-wow"
+
 import './App.scss';
 import Navbar from './components/Navbar'
 import Body from './components/Left'
@@ -42,57 +44,64 @@ function App() {
             <img src="images/image4.png" alt="" srcset="" width="100%"/>
         </OwlCarousel> 
       </div>
-      <div className="description">
-        
-        <div className="description-header">
-            <div className="left-header">
-              <h3>City Gardens Estate</h3>
+      <ReactWOW animation='fadeInUp'>
+        <div className="description">
+            
+            <div className="description-header">
+                <div className="left-header">
+                <h3>City Gardens Estate</h3>
+                </div>
+                <div className="right-header d-flex justify-content-center align-items-center">
+                <h3>N300, 000</h3>
+                </div>
             </div>
-            <div className="right-header d-flex justify-content-center align-items-center">
-              <h3>N300, 000</h3>
+            <div className="location d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center">
+                    <img src="images/location.png" alt="" srcset="" width="20px"/>
+                    <div className="d-flex flex-column">
+                        <p className="m-0 ml-2 address">Ido-Ajaye, Eguduwa Agbara,</p>
+                        <p className="m-0 ml-2"> Ogun State</p>
+                    </div>
+                </div>
+                <div className="d-flex align-items-center">
+                    <img src="images/coo.png" alt="" srcset="" width="20px"/>
+                    <p className="m-0 ml-2">Survey Plan</p>
+                </div>
+                <div className="d-flex align-items-center">
+                    <img src="images/square.png" alt="" srcset="" width="20px"/>
+                    <p className="m-0 ml-2">600sqm</p>
+                </div>
             </div>
-        </div>
-        <div className="location d-flex justify-content-between align-items-center">
-            <div className="d-flex align-items-center">
-                <img src="images/location.png" alt="" srcset="" width="20px"/>
-                <p className="m-0 ml-2 address">Ido-Ajaye, Eguduwa Agbara, Ogun State</p>
+            <div className="notes ml-3 mr-3 my-4">
+            <h4 className="m-0">Description</h4>
+            <p className="mt-2">City gardens estate is located a commercial and industrial area. It is a virgin land in a fast developing enviroment</p>
             </div>
-            <div className="d-flex align-items-center">
-                <img src="images/coo.png" alt="" srcset="" width="20px"/>
-                <p className="m-0 ml-2">Survey Plan</p>
+            <div className="notes ml-3 mr-3 my-4">
+            <h4 className="m-0">Feautures</h4>
+            <p className="mt-2">Virgin Land</p>
+            <p>100% Dry Lands</p>
+            <p>600sqm per plot</p>
+            <p>Industrial and commmercial Neighbourhood</p>
             </div>
-            <div className="d-flex align-items-center">
-                <img src="images/square.png" alt="" srcset="" width="20px"/>
-                <p className="m-0 ml-2">600sqm</p>
+            <div className="notes ml-3 mr-3 my-4">
+            <h4 className="m-0">Neighbourhood</h4>
+            <p className="mt-2">Crown City Parks and  Resort</p>
+            <p>Lagos/Badagry Multilane Expressway</p>
+            <p>Badagry Beach</p>
+            
             </div>
+            <div className="notes ml-3 mr-3 my-4">
+            <h4 className="m-0">Payment Plans</h4>
+            <p className="mt-2">Ouright - N300, 000</p>
+            <p> Installmental - N20 000 Minimin Deposit</p>
+            </div>
+            <button className="">
+                Book Inspection
+            </button>
         </div>
-        <div className="notes ml-3 mr-3 my-4">
-          <h4 className="m-0">Description</h4>
-          <p className="mt-2">City gardens estate is located a commercial and industrial area. It is a virgin land in a fast developing enviroment</p>
-        </div>
-        <div className="notes ml-3 mr-3 my-4">
-          <h4 className="m-0">Feautures</h4>
-          <p className="mt-2">Virgin Land</p>
-          <p>100% Dry Lands</p>
-          <p>600sqm per plot</p>
-          <p>Industrial and commmercial Neighbourhood</p>
-        </div>
-        <div className="notes ml-3 mr-3 my-4">
-          <h4 className="m-0">Neighbourhood</h4>
-          <p className="mt-2">Crown City Parks and  Resort
-          Lagos/Badagry Multilane Expressway
-          Badagry Beach
-          </p>
-        </div>
-        <div className="notes ml-3 mr-3 my-4">
-          <h4 className="m-0">Payment Plans</h4>
-          <p className="mt-2">Ouright - N300, 000 Installmental - N20 000 Minimin Deposit
-          </p>
-        </div>
-        <button className="">
-            Book Inspection
-        </button>
-      </div>
+      
+      </ReactWOW>
+      
     </div>
   );
 }
