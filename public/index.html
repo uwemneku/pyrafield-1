@@ -53,43 +53,42 @@
     <script src="./lightbox2-2.11.3/dist/js/lightbox.min.js"></script>
   <script>
     window.onload = function() {
-      new WOW().init();
-      var owl = $('.owl-carousel');
-      owl.owlCarousel({
       
-      items:3,
-      loop:true,
-      margin:10,
-      autoplay:true,
-      autoplayTimeout:2000,
-      autoplayHoverPause:true,
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-              nav:true
-          },
-          600:{
-              items:2,
-              nav:false
-          },
-          1000:{
-              items:3,
-              nav:true,
-          }
-      }
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwPWxmCyLP7VhEWTF3FQiO1u3gLOSnu_7Af4RfhelQOSdb2IqQ/exec'
+            const form1 = document.forms['google-sheet']
+          
+            document.querySelector(".submit").addEventListener('click', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form1)})
+                .catch(error => console.error('Error!', error.message))
+            document.querySelector(".form1").innerHTML = `<h4 class="text-white thank-u">Thanks for reaching out. We Will contact you soon</h4>`
+              document.querySelectorAll("input").forEach(input => {
+                input.value = ""
+              })
+              
 
-  });
+              setTimeout(function() {
+                document.querySelector(".form1").classList.remove("modals")
+                document.querySelector(".form1").addEventListener("click", function() {
+               document.querySelector(".form1").classList.toggle("modals")
+            })
+              }, 2000)
+            })
 
 
-      lightbox.option({
-        'resizeDuration': 100,
-        'wrapAround': true,
-        'showImageNumberLabel' : false,
-        'imageFadeDuration' : 200,
-        'FadeDuration':200
+          const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzwrvO_q0r-C0R9eLFAFoaVZdvHT43UDQOSCNtHAl_ug1edJpIX/exec'
+            const form2 = document.forms['subscribers']
+          
+            document.querySelector(".subscribers").addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+                .catch(error => console.error('Error!', error.message))
+            
+              document.querySelectorAll("input").forEach(input => {
+                input.value = ""
+              })
 
-      })
+            })
     }
    
     
