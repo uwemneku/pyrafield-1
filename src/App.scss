@@ -195,6 +195,7 @@ body{
   padding: 10px 0 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.17);
   font-family: roboto;
+  min-height: 69px;
   .address-div{
     width: 100%;
     box-sizing: border-box;
@@ -384,7 +385,7 @@ body{
   @media screen and (min-width: 768px) {
     width: 50%;
   }
-  background-color: #007E72;
+  background-color: rgb(2, 80, 72);
   border-radius: 15px;
   input{
     width: 100%;
@@ -490,6 +491,10 @@ body{
   position: fixed;
   bottom: 30px;
   z-index: 100;
+  @media screen and (min-width:992px){
+    width: 100px;
+    height: 100px
+  };
   @media screen and (min-width:1560px){
     display: none
   };
@@ -500,6 +505,9 @@ body{
     width: 100%;
   }
 }
+
+
+
 .bounce{
   animation: bounce 2s infinite;
 }
@@ -519,4 +527,42 @@ body{
   0%   {bottom: 0px;}
   50%  {bottom: 5px;}
   100% {bottom: 0px;}
+}
+
+.success-cover{
+  height: 100vh;
+  z-index: 100000000;
+  position: fixed;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  width: 100%;
+  background-color: #007E72;
+  button{
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    background-color: white;
+    border-style: none;
+  }
+}
+
+.backbtn{
+  background-color: #007E72;
+  padding: 8px 15px;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 100;
+  top: 30px;
+  left: 15px;
+  color: white
 }

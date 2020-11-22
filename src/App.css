@@ -261,6 +261,7 @@ body {
   padding: 10px 0 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.17);
   font-family: roboto;
+  min-height: 69px;
 }
 
 .home-location .address-div {
@@ -467,7 +468,7 @@ body {
   pointer-events: none;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #007E72;
+  background-color: #025048;
   border-radius: 15px;
 }
 
@@ -592,6 +593,13 @@ body {
   padding: 5px;
 }
 
+@media screen and (min-width: 992px) {
+  .whatsapp {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 @media screen and (min-width: 1560px) {
   .whatsapp {
     display: none;
@@ -639,5 +647,59 @@ body {
   100% {
     bottom: 0px;
   }
+}
+
+.success-cover {
+  height: 100vh;
+  z-index: 100000000;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  width: 100%;
+  background-color: #007E72;
+}
+
+.success-cover button {
+  border-radius: 30px;
+  padding: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  background-color: white;
+  border-style: none;
+}
+
+.backbtn {
+  background-color: #007E72;
+  padding: 8px 15px;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 100;
+  top: 30px;
+  left: 15px;
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */

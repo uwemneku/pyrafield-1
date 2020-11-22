@@ -20,7 +20,9 @@ import Estates from "./components/Estates"
 import Managers from "./components/Managers"
 import ScrollToTop from "./components/ScrollToTop"
 
+
 function App() {
+    console.log(window.location.pathname)
 
     const cancel = () => {
         const form = document.querySelector(".form1")
@@ -34,8 +36,13 @@ function App() {
   return (
     <BrowserRouter>
         <Header />
+        
         <div className="whatsapp" onClick={()=> document.location.href="https://wa.me/+2348065050044"}>
             <img src="images/whatsapp.png" alt=""/>
+        </div>
+        <div className="success-cover">
+            <button className="success-button mb-3"><p className="mb-0 mr-2">Submitted</p><img src="images/successbtn.png" alt="" width="30px"/></button>
+            <p className="text-white text-center">A servive representative from Pyrafield Homes will contact you Shortly</p>
         </div>
         <form name="google-sheet" className="form1">
             <input type="text" name="Name" id="name" placeholder="Name" required={true}/>

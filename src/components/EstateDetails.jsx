@@ -2,7 +2,7 @@ import React from 'react'
 import OwlCarousel from 'react-owl-carousel';  
 
 import 'owl.carousel/dist/assets/owl.carousel.css';  
-import {useParams, useRouteMatch} from "react-router-dom"
+import {useParams, useHistory} from "react-router-dom"
 
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 import ReactWOW from "react-wow"
@@ -15,14 +15,15 @@ export default function EstateDetails() {
         document.querySelector("form").classList.toggle("modals")
       }
 
-    let params = useParams()
-    let match  = useRouteMatch()
+        let params = useParams()
+        
 
     console.log(params)
-    console.log(match)
+   
 
     const datas = estates.filter(estate => estate.name == params.estate)
     const data = datas[0]
+    let History =  useHistory()
       console.log(data)
     const state = {
         responsive : {
@@ -41,7 +42,11 @@ export default function EstateDetails() {
   return (
     <>
         <div className="containers container">
+            
             <div className="slideshow">
+                <div className="backbtn" onClick={() => History.goBack()}>
+                    <i class="fas fa-arrow-left"></i>
+                </div>
                 <OwlCarousel 
                     loop
                     autoplay
@@ -85,6 +90,10 @@ export default function EstateDetails() {
                     <h4 className="m-0">Description</h4>
                         <p className="mt-2">{data.description}</p>
                     </div>
+                    {data.title ? <div className="notes ml-3 mr-3 my-4">
+                        <h4 className="m-0">Titles</h4>
+                        {data.title.map(title => <p>{title}</p>)}
+                    </div> : null}
                     <div className="notes ml-3 mr-3 my-4">
                     <h4 className="m-0">Feautures</h4>
                         {data.features.map(feature => <p>{feature}</p>)}
