@@ -22,14 +22,14 @@ body {
           box-sizing: border-box;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 499px) {
   .containers {
     margin: 0;
     padding: 0;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .containers {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,6 +42,18 @@ body {
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .containers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .slideshow {
   z-index: 0;
   width: 100%;
@@ -50,12 +62,25 @@ body {
   margin-top: 54px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .slideshow {
     width: 100%;
     position: relative;
     max-height: 600px;
     margin-top: 54px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .slideshow {
+    width: 49%;
+    position: relative;
+    max-height: 600px;
+    margin-bottom: 30px;
+    margin-top: 54px;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
   }
 }
 
@@ -69,12 +94,21 @@ body {
   height: 400px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .owl-carousel img {
     min-width: 100%;
     min-height: 600px;
     max-height: 600px;
     border-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .owl-carousel img {
+    min-height: 630px;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
   }
 }
 
@@ -95,7 +129,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .description {
     margin-top: -30px;
     width: 100%;
@@ -103,6 +137,17 @@ body {
     position: static;
     -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);
             box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .description {
+    width: 49%;
+    position: relative;
+    margin-top: 54px;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
   }
 }
 
@@ -140,7 +185,6 @@ body {
 
 .description .description-header .left-header {
   padding: 12px;
-  padding-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +201,7 @@ body {
 
 .description .description-header .right-header {
   background: #007E72;
-  min-width: 130px;
+  min-width: 160px;
   margin-left: auto;
   padding: 10px 0 10px 16px;
   border-top-right-radius: 20px;
@@ -187,8 +231,20 @@ body {
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .location div {
+    width: 35%;
+  }
+}
+
 .location div:nth-child(1) {
   width: 38%;
+}
+
+@media screen and (min-width: 1000px) {
+  .location div:nth-child(1) {
+    width: 38%;
+  }
 }
 
 .location .address {
@@ -333,7 +389,8 @@ body {
 .homepage-slide .owl-carousel img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 600px;
+  max-height: auto;
+  min-height: 600px !important;
   border-radius: 0px;
 }
 
@@ -361,13 +418,13 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .estate-component {
-    width: 330px;
+    width: 310px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .estate-component {
-    width: 350px;
+    width: 330px;
   }
 }
 
@@ -464,9 +521,9 @@ body {
 }
 
 .estates-container {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .managers {
@@ -543,5 +600,44 @@ body {
 
 .whatsapp img {
   width: 100%;
+}
+
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+}
+
+.estates-link a {
+  text-decoration: none !important;
+}
+
+.estates-link:hover {
+  text-decoration: none !important;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 5px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 5px;
+  }
+  100% {
+    bottom: 0px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

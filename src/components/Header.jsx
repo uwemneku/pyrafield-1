@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from "react-router-dom"
+import {NavLink, Link} from "react-router-dom"
 // import ReactWOW from 'react-wow'
 
 export default function Header () {
@@ -22,7 +22,7 @@ export default function Header () {
         <div className="header d-flex align-items-center">
           <div className="big-screen-nav d-flex justify-content-between align-items-center container">
             <div className="logo d-flex align-items-center">
-                <img src="images/pyrafieldlogo.png" alt="logo" width="199px" />
+                <Link to="/"><img src="images/pyrafieldlogo.png" alt="logo" width="199px" /></Link>
             </div>
             <div className="big-screen-lists d-none d-md-block">
               <ul className="d-flex m-0 p-0 align-items-center d-none d-md-flex">

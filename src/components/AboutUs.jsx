@@ -28,14 +28,14 @@ export default function AboutUs() {
             <h2>Core Values</h2>
             <hr/>
         </div>
-        <div className="d-flex justify-content-between flex-wrap">
-          <ReactWOW animation="fadeInLeft"><p className="mobile-values" style={{fontSize:25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Loyalty</p></ReactWOW>
-          <ReactWOW animation="fadeInLeft" delay="0.2s"><p className="mobile-values" style={{fontSize:25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Honesty</p></ReactWOW>
-          <ReactWOW animation="fadeInLeft" delay="0.4s"><p className="mobile-values" style={{fontSize:25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Trust</p></ReactWOW>
-          <ReactWOW animation="fadeInLeft" delay="0.4s"><p className="mobile-values" style={{fontSize:25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Ingenuity</p></ReactWOW>
-          <ReactWOW animation="fadeInLeft" delay="0.6s"><p className="mobile-values" style={{fontSize:25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Accountability</p></ReactWOW>
-          <ReactWOW animation="fadeInLeft" delay="0.6s"><p className="mobile-values" style={{fontSize:25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Simplicity</p></ReactWOW>
-          <ReactWOW animation="fadeInLeft" delay="0.6s"><p className="mobile-values" style={{fontSize:25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Respect</p></ReactWOW>
+        <div className="d-flex flex-wrap">
+          <ReactWOW animation="fadeInLeft"><p className="mobile-values" style={{fontSize:25, marginRight: 25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Loyalty</p></ReactWOW>
+          <ReactWOW animation="fadeInLeft" delay="0.2s"><p className="mobile-values" style={{fontSize:25, marginRight: 25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Honesty</p></ReactWOW>
+          <ReactWOW animation="fadeInLeft" delay="0.4s"><p className="mobile-values" style={{fontSize:25, marginRight: 25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Trust</p></ReactWOW>
+          <ReactWOW animation="fadeInLeft" delay="0.4s"><p className="mobile-values" style={{fontSize:25, marginRight: 25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Ingenuity</p></ReactWOW>
+          <ReactWOW animation="fadeInLeft" delay="0.6s"><p className="mobile-values" style={{fontSize:25, marginRight: 25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Accountability</p></ReactWOW>
+          <ReactWOW animation="fadeInLeft" delay="0.6s"><p className="mobile-values" style={{fontSize:25, marginRight: 25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Simplicity</p></ReactWOW>
+          <ReactWOW animation="fadeInLeft" delay="0.6s"><p className="mobile-values" style={{fontSize:25, marginRight: 25, borderLeft:"2px solid rgb(65, 223, 184)", paddingLeft: "20px"}}>Respect</p></ReactWOW>
         </div>
 
         <div className="big-screen-category d-none d-block text-center mt-5 pt-4">

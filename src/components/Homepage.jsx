@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
 import EstateComponents from "./EstateComponents"
 import HomepageSlide from "./HomepageSlide"
-import axios from "axios"
+import estates from "./estatesData"
 
 export default function Homepage() {
+
+  const EstatesArray = estates.map(estate => <EstateComponents data={estate}/>)
   return (
     <>
         <HomepageSlide />
@@ -12,17 +14,8 @@ export default function Homepage() {
             <hr/>
         </div>
         <div className="estates-container d-flex container flex-wrap px-3">
-          <EstateComponents />
-          <EstateComponents />
-          <EstateComponents />
-          <EstateComponents />
-          <EstateComponents />
-          <EstateComponents />
-          <EstateComponents />
-          <EstateComponents />
+          {EstatesArray}
         </div>
-        
-        
     </>
   );
 }
