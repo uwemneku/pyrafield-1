@@ -46,21 +46,21 @@ export default function AboutUs() {
         <div className="estates-container d-flex container flex-wrap px-3 managers align-items-center pt-4 pb-2">
           <ReactWOW animation="fadeInUp">
             <div className="d-flex flex-column align-items-center">
-              <img src="images/manager1.png" alt="" width="200px"/>
+              <img src="images/manager1.png" alt="manager1" width="200px"/>
               <h3 className="text-center">Adebagun James</h3>
               <p className="text-center">CEO/MD</p>
           </div>
           </ReactWOW>
           <ReactWOW animation="fadeInUp">
             <div className="d-flex flex-column align-items-center">
-              <img src="images/manager2.png" alt="" width="200px"/>
+              <img src="images/manager2.jpg" alt="manager2" width="200px" height="200px" />
               <h3 className="text-center">Adebagun James</h3>
               <p className="text-center">Business Development Manager</p>
           </div>
           </ReactWOW>
           <ReactWOW animation="fadeInUp">
             <div className="d-flex flex-column align-items-center">
-              <img src="images/manager3.png" alt="" width="200px"/>
+              <img src="images/manager3.png" alt="manager3" width="200px"/>
               <h3 className="text-center">Oge Brown</h3>
               <p className="text-center">Legal/Hr Manager</p>
           </div>

@@ -9,7 +9,7 @@ export default function EstateComponents({data}) {
         <div className="estate-component">
             <div className="estate-div">
                 
-                    <img src="images/house1.png" className="houseImg"/>
+                    <img src={"images/" + data.images[0]} className="houseImg" alt="estatehomepagpic"/>
                 
                 <div className="home-location d-flex justify-content-between align-items-center">
                     <div className="d-flex align-items-center address-div">

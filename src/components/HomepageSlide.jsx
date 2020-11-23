@@ -2,7 +2,7 @@ import React from 'react';
 import OwlCarousel from 'react-owl-carousel';  
 
 import 'owl.carousel/dist/assets/owl.carousel.css';  
-import {useParams, useRouteMatch} from "react-router-dom"
+
 
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
@@ -29,10 +29,10 @@ export default function HomepageSlide() {
                 margin={10}
                 responsive = {state.responsive}
                 >   
-                <img src="images/hero1.png" alt="" srcset="" width="100%"/>
-                <img src="images/hero2.png" alt="" srcset="" width="100%"/>
-                <img src="images/hero3.png" alt="" srcset="" width="100%"/>
-                <img src="images/hero4.png" alt="" srcset="" width="100%"/>
+                <img src="images/hero1.png" alt="heroslide1" srcset="" width="100%"/>
+                <img src="images/hero2.png" alt="heroslide2" srcset="" width="100%"/>
+                <img src="images/hero3.png" alt="heroslide3" srcset="" width="100%"/>
+                <img src="images/hero4.png" alt="heroslide4" srcset="" width="100%"/>
             </OwlCarousel> 
         </div>
     </>

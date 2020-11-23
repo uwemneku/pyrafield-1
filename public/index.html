@@ -56,36 +56,74 @@
   <script>
     window.onload = function() {
       
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwPWxmCyLP7VhEWTF3FQiO1u3gLOSnu_7Af4RfhelQOSdb2IqQ/exec'
-            const form1 = document.forms['google-sheet']
+            
           
             document.querySelector(".submit").addEventListener('click', e => {
               e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form1)})
-                .catch(error => console.error('Error!', error.message))
-            document.querySelector(".success-cover").classList.toggle("modals")
-            document.querySelector(".form1").classList.toggle("modals")
-              document.querySelectorAll("input").forEach(input => {
-                input.value = ""
-              })
-              document.querySelector("textarea").value = ""
-              
+              const name  = document.querySelector("#name").value
+              const email  = document.querySelector("#email").value
+              const phone  = document.querySelector("#phone").value
+              const message  = document.querySelector("#message").value
 
-              setTimeout(function() {
-                document.querySelector(".success-cover").classList.remove("modals")
+              if(name == ""){
+                document.querySelector(".input-name > span").innerHTML = "Please enter your name"
+              }else {
+                document.querySelector(".input-name > span").innerHTML = ""
+              }
+
+              if(email == ""){
+                document.querySelector(".input-email > span").innerHTML = "Please enter your email"
+              }else{
+                document.querySelector(".input-email > span").innerHTML = ""
+              }
+
+              if(phone == ""){
+                document.querySelector(".input-phone > span").innerHTML = "Please enter your phone"
+              }else{
+                document.querySelector(".input-phone > span").innerHTML = ""
+              }
+
+              if(message == ""){
+                document.querySelector(".input-message > span").innerHTML = "Please enter a message"
+              }else{
+                document.querySelector(".input-message > span").innerHTML = ""
+              }
+
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbwPWxmCyLP7VhEWTF3FQiO1u3gLOSnu_7Af4RfhelQOSdb2IqQ/exec'
+              const form1 = document.forms['google-sheet']
+
+              if(name != "" && email != "" && phone != "" && message !="") {
+                  
+                fetch(scriptURL, { method: 'POST', body: new FormData(form1)})
+                  .catch(error => console.error('Error!', error.message))
+              document.querySelector(".success-cover").classList.toggle("modals")
+              document.querySelector(".form1").classList.toggle("modals")
+                document.querySelectorAll("input").forEach(input => {
+                  input.value = ""
+                })
+                document.querySelector("textarea").value = ""
                 
-              }, 3000)
+
+                setTimeout(function() {
+                  document.querySelector(".success-cover").classList.remove("modals")
+                  
+                }, 3000)
+              }
+              
             })
 
 
-          const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzwrvO_q0r-C0R9eLFAFoaVZdvHT43UDQOSCNtHAl_ug1edJpIX/exec'
-            const form2 = document.forms['subscribers']
+          
           
             document.querySelector(".subscribers").addEventListener('submit', e => {
               e.preventDefault()
+              if(!document.querySelector(".footer input").value == ""){
+                const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzwrvO_q0r-C0R9eLFAFoaVZdvHT43UDQOSCNtHAl_ug1edJpIX/exec'
+              const form2 = document.forms['subscribers']
               fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
                 .catch(error => console.error('Error!', error.message))
             document.querySelector(".success-cover").classList.toggle("modals")
+            document.querySelector(".footer span").innerHTML = ""
               document.querySelectorAll("input").forEach(input => {
                 input.value = ""
               })
@@ -94,9 +132,10 @@
                 document.querySelector(".success-cover").classList.remove("modals")
                 
               }, 3000)
-
-
-            })
+            }else {
+              document.querySelector(".footer span").innerHTML = "Please provide your email"
+            }
+          })
     }
   </script>
   </body>

@@ -15,16 +15,12 @@ export default function EstateDetails() {
         document.querySelector("form").classList.toggle("modals")
       }
 
-        let params = useParams()
-        
-
-    console.log(params)
-   
-
+    let params = useParams()
+ 
     const datas = estates.filter(estate => estate.name == params.estate)
     const data = datas[0]
     let History =  useHistory()
-      console.log(data)
+      
     const state = {
         responsive : {
             0:{
@@ -45,7 +41,7 @@ export default function EstateDetails() {
             
             <div className="slideshow">
                 <div className="backbtn" onClick={() => History.goBack()}>
-                    <i class="fas fa-arrow-left"></i>
+                    <i className="fas fa-arrow-left"></i>
                 </div>
                 <OwlCarousel 
                     loop
@@ -53,10 +49,7 @@ export default function EstateDetails() {
                     margin={10}
                     responsive = {state.responsive}
                     >   
-                    <img src="images/image1.png" alt="" width="100%"/>
-                    <img src="images/image2.png" alt="" width="100%"/>
-                    <img src="images/image3.png" alt="" width="100%"/>
-                    <img src="images/image4.png" alt="" width="100%"/>
+                    {data.images.map(image => <img src={"images/" + image} width="100%" alt="slideshow"/>)}
                 </OwlCarousel> 
             </div>
             <ReactWOW animation='fadeInUp'>
