@@ -6,7 +6,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
-import { Switch, Route, BrowserRouter} from "react-router-dom"
+import { Switch, Route, HashRouter} from "react-router-dom"
 
 import ReactWOW from "react-wow"
 
@@ -39,7 +39,7 @@ function App() {
     })
   
   return (
-    <BrowserRouter>
+    <HashRouter>
         <Header />
         <div className="cover">
             <div className="cover-page">
@@ -98,7 +98,7 @@ function App() {
                 
             </Switch>
         <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
