@@ -54,7 +54,7 @@ export default function AboutUs() {
           <ReactWOW animation="fadeInUp">
             <div className="d-flex flex-column align-items-center">
               <img src="images/manager2.jpg" alt="manager2" width="200px" height="200px" />
-              <h3 className="text-center">Adebagun James</h3>
+              <h3 className="text-center">Ibidire K. Adetunji</h3>
               <p className="text-center">Business Development Manager</p>
           </div>
           </ReactWOW>

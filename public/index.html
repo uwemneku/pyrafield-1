@@ -55,9 +55,6 @@
     <script src="./lightbox2-2.11.3/dist/js/lightbox.min.js"></script>
   <script>
     window.onload = function() {
-      
-            
-          
             document.querySelector(".submit").addEventListener('click', e => {
               e.preventDefault()
               const name  = document.querySelector("#name").value
@@ -83,16 +80,12 @@
                 document.querySelector(".input-phone > span").innerHTML = ""
               }
 
-              if(message == ""){
-                document.querySelector(".input-message > span").innerHTML = "Please enter a message"
-              }else{
-                document.querySelector(".input-message > span").innerHTML = ""
-              }
+              
 
               const scriptURL = 'https://script.google.com/macros/s/AKfycbwPWxmCyLP7VhEWTF3FQiO1u3gLOSnu_7Af4RfhelQOSdb2IqQ/exec'
               const form1 = document.forms['google-sheet']
 
-              if(name != "" && email != "" && phone != "" && message !="") {
+              if(name != "" && email != "" && phone != "") {
                   
                 fetch(scriptURL, { method: 'POST', body: new FormData(form1)})
                   .catch(error => console.error('Error!', error.message))

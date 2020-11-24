@@ -33,6 +33,7 @@ export default function HomepageSlide() {
                 <img src="images/hero2.png" alt="heroslide2" srcset="" width="100%"/>
                 <img src="images/hero3.png" alt="heroslide3" srcset="" width="100%"/>
                 <img src="images/hero4.png" alt="heroslide4" srcset="" width="100%"/>
+                <img src="images/hero5.png" alt="heroslide4" srcset="" width="100%"/>
             </OwlCarousel> 
         </div>
     </>

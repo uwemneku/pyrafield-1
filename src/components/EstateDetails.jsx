@@ -79,10 +79,10 @@ export default function EstateDetails() {
                             <p className="m-0 ml-2">{data.size}</p>
                         </div>
                     </div>
-                    <div className="notes ml-3 mr-3 my-4">
+                    {data.description ? <div className="notes ml-3 mr-3 my-4">
                     <h4 className="m-0">Description</h4>
                         <p className="mt-2">{data.description}</p>
-                    </div>
+                    </div>: null}
                     {data.title ? <div className="notes ml-3 mr-3 my-4">
                         <h4 className="m-0">Titles</h4>
                         {data.title.map(title => <p>{title}</p>)}

@@ -402,6 +402,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .homepage-slide .owl-carousel img {
+    min-height: 750px !important;
+  }
+}
+
 .big-screen-category hr {
   width: 30px;
   margin-top: 10px;
@@ -606,8 +612,8 @@ body {
 
 @media screen and (min-width: 992px) {
   .whatsapp {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 }
 
@@ -758,7 +764,7 @@ body {
 }
 
 span {
-  color: #dc3548 !important;
+  color: #FF9900 !important;
   font-weight: bold;
 }
 /*# sourceMappingURL=App.css.map */

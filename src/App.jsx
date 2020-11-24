@@ -25,17 +25,17 @@ function App() {
     console.log(window.location.pathname)
     const cancel = () => {
         const form = document.querySelector(".form1")
-        document.querySelector(".cancel-btn").addEventListener("click", function() {
-        if(form.classList.contains("modals")) {
-            form.classList.remove("modals")
-            }
-        })
+        document.querySelector(".input-name > span").innerHTML = ""
+        document.querySelector(".input-email > span").innerHTML = ""
+        document.querySelector(".input-phone > span").innerHTML = ""
+        form.classList.remove("modals")
+        
     }
 
     useEffect(()=> {
         setTimeout(()=>{
             document.querySelector(".cover").style.opacity = 0
-        },4000)
+        },3000)
     })
   
   return (
@@ -70,7 +70,7 @@ function App() {
                 <span></span>
             </div>
            <div className="input-message mb-3">
-                <textarea name="Message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
+                <textarea name="Message" id="message" cols="30" rows="5" placeholder="Message (Optional)" required></textarea>
                 <span></span>
            </div>
             <div className="d-flex">
